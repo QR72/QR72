@@ -10,7 +10,7 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker
       .register('/service-worker.js')
       .then(reg => {
-        console.log('SW registered: ', reg);
+        //console.log('SW registered: ', reg);
         if (!localStorage.getItem('offline')) {
           localStorage.setItem('offline', true);
           snackbar.show('Prêt pour un usage hors-ligne.', 5000);
@@ -43,6 +43,10 @@ window.addEventListener('DOMContentLoaded', () => {
   var helpTextEle = document.querySelector('.app__help-text');
   var infoSvg = document.querySelector('.app__header-icon svg');
   var videoElement = document.querySelector('video');
+  var headerIcon = document.querySelector('.app__header-icon');
+  var infoDialogElement = document.querySelector('.app__infodialog');
+  var infoDialogCloseBtnElement = document.querySelector('.app__infodialog-close');
+  var infoDialogOverlayElement = document.querySelector('.app__infodialog-overlay');
   window.appOverlay = document.querySelector('.app__overlay');
   var selectedCamera = null;
   var typeCamera = null;
@@ -76,8 +80,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //Dialog close btn event
   dialogCloseBtnElement.addEventListener('click', hideDialog, false);
+  infoDialogCloseBtnElement.addEventListener('click', closeInfoDialog, false);
   dialogOpenBtnElement.addEventListener('click', openInBrowser, false);
-  dialogCopyBtnElement.addEventListener('click', copyToClipBoard, false);
+  headerIcon.addEventListener('click', showInfo, false);
 
   //To open result in browser
   function openInBrowser() {
@@ -89,7 +94,7 @@ window.addEventListener('DOMContentLoaded', () => {
   
   //To copy result to clipboard
   function copyToClipBoard() {
-    console.log('Result: ', copiedText);
+    console.log('Résultat : ', copiedText);
     copy(copiedText);
     copiedText = null;
     hideDialog();
@@ -234,5 +239,15 @@ window.addEventListener('DOMContentLoaded', () => {
         scan(true);
       }
     });
+  }
+  
+  function showInfo() {
+    infoDialogElement.classList.remove('app__infodialog--hide');
+    infoDialogOverlayElement.classList.remove('app__infodialog--hide');
+  }
+  
+  function closeInfoDialog() {
+    infoDialogElement.classList.add('app__infodialog--hide');
+    infoDialogOverlayElement.classList.add('app__infodialog--hide');
   }
 });

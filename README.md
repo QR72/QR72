@@ -4,7 +4,7 @@
 
 *QR72 permet de scanner les QR-codes facilement et rapidement.*
 
-### [Site internet](https://qr72.tk/)
+### [Site internet](https://qr72.fr/)
 
 ## Fonctionnalités
 

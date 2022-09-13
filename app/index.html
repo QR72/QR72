@@ -27,20 +27,40 @@
       <main class="app__layout-content">
         <video autoplay></video>
 
-        <!-- Dialog  -->
+        <!-- Dialog for result  -->
         <div class="app__dialog app__dialog--hide">
           <div class="app__dialog-content">
-            <h5>QR Code trouvé !</h5>
+            <h1>QR Code trouvé !</h1>
             <input type="text" id="result">
           </div>
           <div class="app__dialog-actions">
-            <button type="button" class="app__dialog-copy">Copier</button>
             <button type="button" class="app__dialog-open">Ouvrir</button>
+            <button type="button" class="app__dialog-copy">Copier</button>
             <button type="button" class="app__dialog-close">Fermer</button>
           </div>
         </div>
-
+        
         <div class="app__dialog-overlay app__dialog--hide"></div>
+        
+        <!-- Info Dialog  -->
+        <div class="app__infodialog app__infodialog--hide">
+          <div class="app__infodialog-content">
+            <h1>À propos</h1>
+            <p>QR72.tk change et devient QR72.fr ; pensez à changer vos favoris...</p>
+            <p>C'est une web application rapide et intuitive pour scanner des QR-codes.</p>
+            <div class="app__infodialog-subcontent">
+              <p><strong>Créé par :</strong> <a href="https://github.com/gokulkrishh" rel="noreferrer noopener">Gokulakrishnan Kalaikovan</a></p>
+              <p><strong>Adapté par :</strong> <a href="https://www.desmaths.fr" rel="noreferrer noopener">Nicolas Desmaths.fr</a></p>
+              <p><strong>Source :</strong> <a href="https://github.com/QR72/QR72" rel="noreferrer noopener">Github</a></p>
+            </div>
+            <span class="app__version">v2022.09.13</span>
+          </div>
+          <div class="app__infodialog-actions">
+            <button type="button" class="app__infodialog-close">Fermer</button>
+          </div>
+        </div>
+        
+        <div class="app__infodialog-overlay app__infodialog--hide"></div>
 
         <!-- Snackbar -->
         <div class="app__snackbar"></div>
@@ -51,6 +71,13 @@
       <!-- Scanner animation -->
       <div class="custom-scanner"></div>
       <div class="app__help-text"></div>
+    </div>
+    
+    <div class="app__header-icon">
+      <svg fill="#FFFFFF" height="27" viewBox="0 0 24 24" width="27" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"></path>
+      </svg>
     </div>
 
     <div class="app__logo"></div>
