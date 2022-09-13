@@ -504,6 +504,15 @@ input[type='file'] {
   height: auto;
 }
 
+.app__version {
+  position: absolute;
+  bottom: 20px;
+  font-size: 12px;
+  color: #737373;
+  margin-top: 15px;
+  display: inline-block;
+}
+
 @media screen and (max-width: 480px) {
   .app__infodialog {
     width: 90%;
