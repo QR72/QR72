@@ -336,7 +336,6 @@ video {
   font-weight: 500;
   outline: none;
   cursor: pointer;
-  margin-right: -5px;
 }
 
 .app__dialog-open,
