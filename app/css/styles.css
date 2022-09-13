@@ -512,6 +512,12 @@ input[type='file'] {
   display: inline-block;
 }
 
+.app__scanner-img {
+  z-index: 1;
+  position: relative;
+  display: none;
+}
+
 @media screen and (max-width: 480px) {
   .app__infodialog {
     width: 90%;
