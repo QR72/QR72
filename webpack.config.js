@@ -20,12 +20,13 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].[hash].css',
       chunkFilename: '[id].css'
     }),
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,
       skipWaiting: true,
+      cleanupOutdatedCaches: true,
       runtimeCaching: [{ urlPattern: new RegExp('/'), handler: 'staleWhileRevalidate' }]
     }),
     new HtmlWebpackPlugin({

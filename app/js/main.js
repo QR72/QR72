@@ -4,7 +4,6 @@ import styles from '../css/styles.css';
 import isURL from 'is-url';
 import copy from 'copy-to-clipboard';
 
-//If service worker is installed, show offline usage notification
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
