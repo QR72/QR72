@@ -430,8 +430,8 @@ video {
   background-color: #1e8742;
   background-image: url("/images/add-photo.svg");
   background-repeat: no-repeat;
-  background-size: 42px;
-  background-position: 8px 8px;
+  background-size: 38px;
+  background-position: 10px 10px;
 }
 
 .app__add-photo:active {
@@ -449,8 +449,8 @@ video {
   background-color: #1e8742;
   background-image: url("/images/remove-photo.svg");
   background-repeat: no-repeat;
-  background-size: 42px;
-  background-position: 8px 8px;
+  background-size: 38px;
+  background-position: 10px 10px;
 }
 
 .app__remove-photo:active {
@@ -468,8 +468,8 @@ video {
   background-color: #1e8742;
   background-image: url("/images/flip-camera.svg");
   background-repeat: no-repeat;
-  background-size: 42px;
-  background-position: 8px 8px;
+  background-size: 38px;
+  background-position: 10px 10px;
 }
 
 .app__flip-camera:active {
