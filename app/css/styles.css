@@ -29,28 +29,6 @@ body {
   z-index: 10;
 }
 
-.app__header-icon {
-  width: 35px;
-  height: 35px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-
-.app__header-icon:active {
-  opacity: 0.8;
-}
-
 .app__header-title {
   margin-left: 5px;
   font-size: 19px;
@@ -495,6 +473,25 @@ video {
 }
 
 .app__flip-camera:active {
+  opacity: 0.8;
+}
+
+.app__header-icon {
+  width: 58px;
+  height: 58px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  background-color: #1e8742;
+  background-image: url("/images/info.svg");
+  background-repeat: no-repeat;
+  background-size: 42px;
+  background-position: 8px 8px;
+}
+
+.app__header-icon:active {
   opacity: 0.8;
 }
 
