@@ -20,7 +20,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new MiniCssExtractPlugin({
-      filename: "[name].[hash].css",
+      filename: '[name].css',
+      chunkFilename: '[id].css'
     }),
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,
@@ -34,7 +35,7 @@ module.exports = {
       }
     }),
     new ExtractTextPlugin({
-      filename: 'styles.css'
+      filename: "styles.[hash].css"
     }),
     new OptimizeCssAssetsPlugin({
       cssProcessorPluginOptions: {
