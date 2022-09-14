@@ -362,8 +362,8 @@ video {
   right: 0;
   left: 0;
   transition: all 200ms ease-in;
-  width: calc(100vw - 180px);
-  height: calc(100vh - 180px);
+  width: calc(100% - 180px);
+  height: calc(100% - 180px);
   min-width: 320px;
   min-height: 320px;
   margin: auto;
