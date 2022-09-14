@@ -26,7 +26,6 @@ module.exports = {
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,
       skipWaiting: true,
-      cleanupOutdatedCaches: true,
       runtimeCaching: [{ urlPattern: new RegExp('/'), handler: 'staleWhileRevalidate' }]
     }),
     new HtmlWebpackPlugin({
